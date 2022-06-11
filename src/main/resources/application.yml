@@ -1,0 +1,28 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rds-test.crrmwwnynfmo.ap-northeast-2.rds.amazonaws.com:3306/news_crawling?serverTimezone=Asia/Seoul
+    username: admin
+    password: zldpf1031
+  profiles:
+    include:
+      - aws
+      - credentials
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
