@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - main # git default 브런치를 등록한다. (ex. master)
+    - master # git default 브런치를 등록한다. (ex. master)
 
 # Travis CI 서버의 Home
 cache:
