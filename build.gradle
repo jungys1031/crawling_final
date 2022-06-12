@@ -12,6 +12,8 @@ repositories {
 	mavenCentral()
 }
 
+
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -20,10 +22,11 @@ dependencies {
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
 	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
-	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	// https://mvnrepository.com/artifact/io.mateu/lombok
-	implementation group: 'io.mateu', name: 'lombok', version: '1.18.11.97'
+	compileOnly 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	testCompileOnly 'org.projectlombok:lombok:1.18.12'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
 }
 
 tasks.named('test') {
