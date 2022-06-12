@@ -12,7 +12,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
 @Entity
 @Table(name = "main_crawling")
 public class Crawling {
